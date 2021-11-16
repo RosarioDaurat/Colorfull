@@ -507,6 +507,95 @@ this.cambio = false;
   };
 }
 
+function NubeArcoiris() { //---NUBE ARCOIRIS
+  this.x = random(width);
+  this.y = random(-400, -150);
+  this.tamx = random(270/2, 270);
+  this.tamy = random(100/2, 100);
+  this.n = 0;
+  this.cambio = false;
+
+  
+  this.mover = function () {
+  if (this.y > height + 200) {
+  this.y = random(-500, -100);
+  this.x = random(width);
+    
+    }
+    
+    if(Nivel == "Tormenta1" || Nivel == "Tormenta2" || Nivel == "Boss"){
+    if (motivacion == 0) {
+      this.n = 0;
+    }
+    
+    if (this.n == 0) {
+      this.y = this.y + yspeed;
+    }
+  }
+ 
+      if (motivacion > 0 && this.y > height + 190) {
+      this.y = random(-500, -100);
+      this.n = 1;
+    }
+  
+  };
+
+  this.mostrar = function () {
+    push();
+    imageMode(CENTER);
+    noStroke();
+    image(nubeArcoiris, this.x, this.y, this.tamx, this.tamy);
+    pop();
+  };
+
+
+  this.cambiarColor = function () {
+    let distancia = dist(booble.x, booble.y, this.x, this.y);
+
+    if (distancia < 80 && cd == 160) {
+      this.cambio = true;
+      if (Nivel == "Tormenta1") {
+        if (cambiar <= 50) {
+          cambiar= 20;
+          cd = 159;
+        }
+      }
+      if (Nivel == "Tormenta2") {
+        if (cambiar <= 500) {
+          cambiar= 400;
+          cd = 159;
+        }
+      }
+      if (Nivel == "Boss") {
+        if (cambiar <= 5000) {
+          cambiar= 3000;
+          cd = 159;
+        }
+      }
+    }else{
+      this.cambio = false;
+    }
+
+    //---MOTIVACION
+
+     if (this.cambio == true) {
+        if(!efecto.isPlaying())efecto.play();
+      if (motivacion == 0 && contMot == 160) {
+        motivacion = 3;
+        contMot = 159;
+      }
+    }
+
+    if (contMot <= 159) {
+      contMot--;
+    }
+
+    if (contMot == 0) {
+      contMot = 160;
+    }
+  };
+}
+
 function NubeGris() {
   //---NUBE GRIS
   this.x = random(width);
@@ -642,91 +731,4 @@ function NubeGris() {
   };
 }
 
-function NubeArcoiris() { //---NUBE ARCOIRIS
-  this.x = random(width);
-  this.y = random(-400, -150);
-  this.tamx = random(270/2, 270);
-  this.tamy = random(100/2, 100);
-  this.n = 0;
-  this.cambio = false;
 
-  
-  this.mover = function () {
-  if (this.y > height + 200) {
-  this.y = random(-500, -100);
-  this.x = random(width);
-    
-    }
-    
-    if(Nivel == "Tormenta1" || Nivel == "Tormenta2" || Nivel == "Boss"){
-    if (motivacion == 0) {
-      this.n = 0;
-    }
-    
-    if (this.n == 0) {
-      this.y = this.y + yspeed;
-    }
-  }
- 
-      if (motivacion > 0 && this.y > height + 190) {
-      this.y = random(-500, -100);
-      this.n = 1;
-    }
-  
-  };
-
-  this.mostrar = function () {
-    push();
-    imageMode(CENTER);
-    noStroke();
-    image(nubeArcoiris, this.x, this.y, this.tamx, this.tamy);
-    pop();
-  };
-
-
-  this.cambiarColor = function () {
-    let distancia = dist(booble.x, booble.y, this.x, this.y);
-
-    if (distancia < 80 && cd == 160) {
-      this.cambio = true;
-      if (Nivel == "Tormenta1") {
-        if (cambiar <= 50) {
-          cambiar= random(1,5)*10;
-          cd = 159;
-        }
-      }
-      if (Nivel == "Tormenta2") {
-        if (cambiar <= 500) {
-          cambiar= random(1,5)*100;
-          cd = 159;
-        }
-      }
-      if (Nivel == "Boss") {
-        if (cambiar <= 5000) {
-          cambiar= random(1,5)*1000;
-          cd = 159;
-        }
-      }
-    }else{
-      this.cambio = false;
-    }
-
-    //---MOTIVACION
-
-     if (this.cambio == true) {
-        if(!efecto.isPlaying())efecto.play();
-      if (motivacion == 0 && contMot == 160) {
-        motivacion = 3;
-        contMot = 159;
-      }
-    }
-
-    if (contMot <= 159) {
-      contMot--;
-    }
-
-    if (contMot == 0) {
-      contMot = 160;
-    }
-  };
-}

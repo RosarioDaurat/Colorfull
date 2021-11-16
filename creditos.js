@@ -12,7 +12,7 @@ class Creditos{
      image(nubeNaranja, 600, this.y, 300, 140);
      image(nubeCeleste, 800, this.y-200, 300, 130);
      image(nubeNaranja, 400, this.y-500, 300, 140);
-     image(nubeVerde, 700, this.y-650, 350, 250);
+     image(nubeVerde, 700, this.y-650, 350, 180);
      image(nubeCeleste, 200, this.y-850, 300, 130);
      image(nubeNaranja, 1000, this.y-1000, 300, 140);
      image(nubeRosa, 500, this.y-1200, 256, 111);
@@ -32,11 +32,11 @@ class Creditos{
  
     push();
     fill(0);
-  // if( final == "triste"){
-  //   fill(255);
-  // }else if(final == "feliz"){
-  //   fill(0);
-  // }
+   if( final == "triste"){
+     fill(255);
+  }else if(final == "feliz"){
+    fill(0);
+   }
   text("Grupo Alcachofa", 600, this.y);
     
   text("Ilustracion:",800, this.y-220);

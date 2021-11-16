@@ -58,7 +58,8 @@ function preload() {
   Boss = loadSound("boss.mp3");
   Trueno = loadSound("Trueno.mp3");
   efecto.setVolume(0.1);
-  lluvia1.setVolume(0.3);
+  Trueno.setVolume(0.2);
+  lluvia1.setVolume(0.4);
   musica.setVolume(0.3);
   Boss.setVolume(0.3);
   aturdido.setVolume(0.2);

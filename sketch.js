@@ -123,6 +123,7 @@ function draw() {
    //------------------BOSS
     case "Boss": 
      lluvia1.setVolume(0.3);
+      Trueno.setVolume(0.3);
      Cboss++;
      //theBoss();
     yspeed = random(9, 10);
@@ -170,6 +171,7 @@ function draw() {
       //------------------FINALTRISTE
     case "Finaltriste":
       final = "triste";
+      
     pausa = 10; 
     Cboss++;
         if (m == 4) {
@@ -189,6 +191,12 @@ function draw() {
   
    //---------CREDITOS--------
 case "Creditos":   
+      if(final == "feliz"){
+          let transicion3 = map(contadorTormenta, 2000, 2200, 0, 200);
+      fill(249, 211, 227, transicion3);
+      rect(0, 0, width, height);
+      }
+    
       pausa = 10;
       pausaGrises = 10;
     creditos.Mostrar();
@@ -226,7 +234,13 @@ break;
     if(count <= 0) count = 200;
     
     for (var t = 0; t < cantGrises; t++) {
-      if(Nivel == "Tormenta2" || Nivel == "Boss"){
+        if(Nivel == "Tormenta2"){
+         if(count % 6 == 0){
+      if(!Trueno.isPlaying())Trueno.play();
+      nubeGris[t].rayos();
+      }
+        }
+      if(Nivel == "Boss"){
          if(count % 6 == 0){
       if(!Trueno.isPlaying())Trueno.play();
       nubeGris[t].rayos();
