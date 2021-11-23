@@ -11,7 +11,7 @@ class Portada{
     this.titulo = loadImage("otros/titulo.png");
   }
   
-  Dibujar(){
+  Dibujar(){ //METODO DUBUJAR PORTADA
     push();
     imageMode(CENTER);
     image(this.titulo, displayWidth/2, this.tituloy ,600,280)
@@ -20,8 +20,7 @@ class Portada{
      image(nubeNaranja, 1500, 500,200, 100);
      image(nubeRosa, this.x, this.y, this.tamx, this.tamy);
     pop();
-    
-    image(gif, booble.x - 35, booble.y - 25, 80, 90);
+
     
     if(this.transicion == false){
        if(this.tamx == 256 ){
@@ -42,7 +41,7 @@ class Portada{
     }  
   }
   
-  Comenzar(){
+  Comenzar(){ //METODO PARA COMENZAR EL JUEGO
     if(booble.x > this.x - this.tamx/2 && booble.x < this.x+this.tamx/2 && booble.y > this.y -this.tamy/2 && booble.y < this.y + this.tamy/2){
      this.transicion = true;    
     }

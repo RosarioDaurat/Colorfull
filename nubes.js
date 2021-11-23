@@ -2,8 +2,8 @@ function NubeCeleste() {
   //---NUBE CELESTE
   this.x = random(width);
   this.y = random(-400, -150);
-  this.tamx = random(260/2, 260);
-  this.tamy = random(130/2, 130);
+  this.tamx = random(300/1.5, 300);
+  this.tamy = random(140/1.5, 140);
   this.n = 0;
 
   this.mover = function () {
@@ -75,7 +75,7 @@ function NubeCeleste() {
 
     //---MOTIVACION
 
-    if (this.cambio == true) {
+    if (this.cambio == true && final == "ninguno") {
       if (motivacion == 0 && contMot == 160) {
         motivacion = 1;
         contMot = 159;
@@ -104,8 +104,8 @@ function NubeRosa() {
   //---NUBE ROSA
   this.x = random(width);
   this.y = random(-400, -150);
-  this.tamx = random(256/2, 256);
-  this.tamy = random(111/2, 111);
+   this.tamx = random(300/2, 300);
+  this.tamy = random(140/2, 140);
   this.n = 0;
   this.cambio = false;
 
@@ -176,7 +176,7 @@ function NubeRosa() {
 
     //---MOTIVACION
 
- if (this.cambio == true) {
+ if (this.cambio == true && final == "ninguno") {
    if (motivacion == 0 && contMot == 160) {
         motivacion = 1;
         contMot = 159;
@@ -206,8 +206,8 @@ function NubeLila() {
   //---NUBE LILA
   this.x = random(width);
   this.y = random(-400, -150);
-  this.tamx = random(177/2, 177);
-  this.tamy = random(101/2, 101);
+  this.tamx = random(100, 181);
+  this.tamy = random(60, 107);
   //yspeed = random(2.5, 5.5);
   this.n = 0;
     this.cambio = false;
@@ -279,7 +279,7 @@ function NubeLila() {
 
     //---MOTIVACION
 
-    if (this.cambio == true) {
+    if (this.cambio == true && final == "ninguno") {
       if (motivacion == 0 && contMot == 160) {
         motivacion = 1;
         contMot = 159;
@@ -309,8 +309,8 @@ function NubeVerde() {
   //---NUBE VERDE
   this.x = random(width);
   this.y = random(-400, -150);
-  this.tamx = random(251/2, 251);
-  this.tamy = random(127/2, 127);
+  this.tamx = random(200, 300);
+  this.tamy = random(123, 185);
   this.n = 0;
   this.cambio = false;
 
@@ -380,7 +380,7 @@ function NubeVerde() {
 
     //---MOTIVACION
 
-    if (this.cambio == true) {
+    if (this.cambio == true && final == "ninguno") {
       if (motivacion == 0 && contMot == 160) {
         motivacion = 1;
         contMot = 159;
@@ -410,8 +410,8 @@ function NubeNaranja() {
   //---NUBE NARANJA
   this.x = random(width);
   this.y = random(-400, -150);
-  this.tamx = random(220/2, 220);
-  this.tamy = random(102/2, 102);
+  this.tamx = random(262/2, 262);
+  this.tamy = random(130/2, 130);
   // yspeed = random(2.5, 5.5);
   this.n = 0;
 this.cambio = false;
@@ -451,7 +451,7 @@ this.cambio = false;
       this.cambio = true;
       if (Nivel == "INICIO") {
         if (cambiar < 6) {
-          cambiar = 6;
+          cambiar = 5;
           cd = 159;
         }
       }
@@ -481,7 +481,7 @@ this.cambio = false;
 
     //---MOTIVACION
     
- if (this.cambio == true) {
+ if (this.cambio == true && final == "ninguno") {
       if (motivacion == 0 && contMot == 160) {
         motivacion = 1;
         contMot = 159;
@@ -510,8 +510,8 @@ this.cambio = false;
 function NubeArcoiris() { //---NUBE ARCOIRIS
   this.x = random(width);
   this.y = random(-400, -150);
-  this.tamx = random(270/2, 270);
-  this.tamy = random(100/2, 100);
+  this.tamx = random(300/2, 300);
+  this.tamy = random(183/2, 183);
   this.n = 0;
   this.cambio = false;
 
@@ -531,12 +531,12 @@ function NubeArcoiris() { //---NUBE ARCOIRIS
     if (this.n == 0) {
       this.y = this.y + yspeed;
     }
-  }
- 
+
       if (motivacion > 0 && this.y > height + 190) {
       this.y = random(-500, -100);
       this.n = 1;
     }
+        }
   
   };
 
@@ -550,35 +550,38 @@ function NubeArcoiris() { //---NUBE ARCOIRIS
 
 
   this.cambiarColor = function () {
-    let distancia = dist(booble.x, booble.y, this.x, this.y);
+  let distancia = dist(booble.x, booble.y, this.x, this.y);
 
-    if (distancia < 80 && cd == 160) {
-      this.cambio = true;
+  if (distancia < 80 && cd == 160) {
+    this.cambio = true;
       if (Nivel == "Tormenta1") {
-        if (cambiar <= 50) {
-          cambiar= 20;
+        if (cambiar <= 60) {
+          cambiar = 20;
           cd = 159;
         }
       }
+    
       if (Nivel == "Tormenta2") {
-        if (cambiar <= 500) {
+        if (cambiar <= 600) {
           cambiar= 400;
           cd = 159;
         }
       }
+    
       if (Nivel == "Boss") {
-        if (cambiar <= 5000) {
+        if (cambiar <= 6000) {
           cambiar= 3000;
           cd = 159;
         }
       }
+    
     }else{
       this.cambio = false;
     }
 
     //---MOTIVACION
 
-     if (this.cambio == true) {
+     if (this.cambio == true && final == "ninguno") {
         if(!efecto.isPlaying())efecto.play();
       if (motivacion == 0 && contMot == 160) {
         motivacion = 3;
@@ -600,8 +603,8 @@ function NubeGris() {
   //---NUBE GRIS
   this.x = random(width);
   this.y = random(-400, -150);
-  this.tamx = random(270/2, 270);
-  this.tamy = random(100/2, 100);
+  this.tamx = random(320/2, 320);
+  this.tamy = random(118/2, 118);
   this.n = 0;
   this.cambio = false;
 
@@ -638,26 +641,36 @@ function NubeGris() {
     pop();
   };
 
-  this.rayos = function() {
+  this.cargada = function() {
     push();
+    noStroke();
+    fill(225, 179, 43,5);
+    ellipse(this.x, this.y, this.tamy, this.tamy);
+    pop();
+  }
+  
+  this.rayos = function() {
+    if(booble.y > this.y){
+      push();
     for (var i = 0; i < 10; i++) {
       
       xCoord1 = xCoord2;
       yCoord1 = yCoord2;
+      //if(booble.x > this.x)xCoord2 = xCoord1 + int(random(10, 30));
+      //if(booble.x < this.x)xCoord2 = xCoord1 + int(random(-30, -10));
       xCoord2 = xCoord1 + int(random(-40, 40));
-      yCoord2 = yCoord1 + int(random(10, 75));
+      yCoord2 = yCoord1 + int(random(30, 55));
       
       strokeWeight(random(3, 5));
       strokeJoin(MITER);
       line(xCoord1, yCoord1, xCoord2, yCoord2);
       
-      if ((xCoord2 > width) | (xCoord2 < 0) | (yCoord2 > height) | (yCoord2 < 0)) {
+      if ((xCoord2 > width) | (xCoord2 < 0) | (yCoord2 > this.y+500) | (yCoord2 < 0)) {
         xCoord2 = this.x;
         yCoord2 = this.y;
         stroke(225, 179, 43);
       }
-    }
-    pop();
+    }pop();}
   };
 
   this.cambiarColor = function () {
@@ -693,7 +706,7 @@ function NubeGris() {
 
     //---MOTIVACION
 
-     if (this.cambio == true) {
+     if (this.cambio == true && final == "ninguno" ){
        if(!aturdido.isPlaying())aturdido.play();
        
       if (motivacion == 3 && contMot == 160) {

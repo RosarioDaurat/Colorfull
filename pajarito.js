@@ -2,46 +2,46 @@ function pajaro() {
   let mil = millis();
   //KIWIBEBE
   if (cambiar == 0) {
-    image(gif, booble.x - 35, booble.y - 25, 80, 90);
+    image(gif, booble.x - 35, booble.y - 25, 100, 110);
   } else if (cambiar == 1) {
-    image(kiwiCeleste, booble.x - 30, booble.y - 25, 80, 90);
+    image(kiwiCeleste, booble.x - 30, booble.y - 25, 100, 110);
   } else if (cambiar == 2) {
-    image(kiwiRosa, booble.x - 30, booble.y - 25, 80, 90);
+    image(kiwiRosa, booble.x - 30, booble.y - 25, 100, 110);
   } else if (cambiar == 3) {
-    image(kiwiLila, booble.x - 30, booble.y - 25, 80, 90);
+    image(kiwiLila, booble.x - 30, booble.y - 25, 100, 110);
   } else if (cambiar == 4) {
-    image(kiwiVerde, booble.x - 30, booble.y - 25, 80, 90);
+    image(kiwiVerde, booble.x - 30, booble.y - 25, 100, 110);
   } else if (cambiar == 5) {
-    image(kiwiNaranja, booble.x - 30, booble.y - 25, 80, 90);
+    image(kiwiNaranja, booble.x - 30, booble.y - 25, 100, 110);
   } else if (cambiar == 6) {
-    image(kiwiGris, booble.x - 30, booble.y - 25, 80, 90);
+    image(kiwiGris, booble.x - 30, booble.y - 25, 100, 110);
   }
   
     //KIWICHICO
    if (cambiar == 10) {
     push();
     imageMode(CENTER);
-    image(kiwiCelesteChico, booble.x, booble.y, 80, 90);
+    image(kiwiCelesteChico, booble.x, booble.y, 90, 110);
     pop();
   }else if (cambiar == 20) {
     push();
     imageMode(CENTER);
-    image(kiwiRosaChico, booble.x, booble.y, 80, 90);
+    image(kiwiRosaChico, booble.x, booble.y, 90, 110);
     pop();
   }else if (cambiar == 30) {
     push();
     imageMode(CENTER);
-    image(kiwiLilaChico, booble.x, booble.y, 80, 90);
+    image(kiwiLilaChico, booble.x, booble.y, 90, 110);
     pop();
   }else if (cambiar == 40) {
     push();
     imageMode(CENTER);
-    image(kiwiVerdeChico, booble.x, booble.y, 80, 90);
+    image(kiwiVerdeChico, booble.x, booble.y, 90, 110);
     pop();
   }else if (cambiar == 50) {
     push();
     imageMode(CENTER);
-    image(kiwiNaranjaChico, booble.x, booble.y, 80, 90);
+    image(kiwiNaranjaChico, booble.x, booble.y, 90, 110);
     pop();
   }
   else if (cambiar == 60) {
@@ -50,14 +50,14 @@ function pajaro() {
         push();
         tint(255,100);
         imageMode(CENTER);
-        image(kiwiGrisChico, booble.x, booble.y, 80, 90); 
+        image(kiwiGrisChico, booble.x, booble.y, 90, 110); 
         pop();
       }
     }
     if(parpadeo == false){
       push();
       imageMode(CENTER);
-      image(kiwiGrisChico, booble.x, booble.y, 80, 90);
+      image(kiwiGrisChico, booble.x, booble.y, 90, 110);
       pop();
     }
     }
@@ -66,27 +66,27 @@ function pajaro() {
    if (cambiar == 100) {
     push();
     imageMode(CENTER);
-    image(kiwiCelesteMediano, booble.x, booble.y, 100, 100);
+    image(kiwiCelesteMediano, booble.x, booble.y, 110, 120);
     pop();
   }else if (cambiar == 200) {
     push();
     imageMode(CENTER);
-    image(kiwiRosaMediano, booble.x, booble.y, 100, 100);
+    image(kiwiRosaMediano, booble.x, booble.y, 110, 120);
     pop();
   }else if (cambiar == 300) {
     push();
     imageMode(CENTER);
-    image(kiwiLilaMediano, booble.x, booble.y, 100, 100);
+    image(kiwiLilaMediano, booble.x, booble.y, 110, 120);
     pop();
   }else if (cambiar == 400) {
     push();
     imageMode(CENTER);
-    image(kiwiVerdeMediano, booble.x, booble.y,100, 100);
+    image(kiwiVerdeMediano, booble.x, booble.y,110, 120);
     pop();
   }else if (cambiar == 500) {
     push();
     imageMode(CENTER);
-    image(kiwiNaranjaMediano, booble.x, booble.y, 100, 100);
+    image(kiwiNaranjaMediano, booble.x, booble.y, 110, 120);
     pop();
   }  else if (cambiar == 600) {
     if(parpadeo == true){
@@ -94,14 +94,14 @@ function pajaro() {
         push();
         tint(255,100);
         imageMode(CENTER);
-        image(kiwiGrisMediano, booble.x, booble.y, 100, 100); 
+        image(kiwiGrisMediano, booble.x, booble.y, 110, 120); 
         pop();
       }
     }
     if(parpadeo == false){
       push();
       imageMode(CENTER);
-      image(kiwiGrisMediano, booble.x, booble.y, 100, 100);
+      image(kiwiGrisMediano, booble.x, booble.y, 110, 120);
       pop();
     }
     }
@@ -110,27 +110,27 @@ function pajaro() {
    if (cambiar == 1000) {
     push();
     imageMode(CENTER);
-    image(kiwiCelesteGrande, booble.x, booble.y, 130, 130);
+    image(kiwiCelesteGrande, booble.x, booble.y, 150, 140);
     pop();
   }else if (cambiar == 2000) {
     push();
     imageMode(CENTER);
-    image(kiwiRosaGrande, booble.x, booble.y,130, 130);
+    image(kiwiRosaGrande, booble.x, booble.y,150, 140);
     pop();
   }else if (cambiar == 3000) {
     push();
     imageMode(CENTER);
-    image(kiwiLilaGrande, booble.x, booble.y, 140, 130);
+    image(kiwiLilaGrande, booble.x, booble.y, 150, 140);
     pop();
   }else if (cambiar == 4000) {
     push();
     imageMode(CENTER);
-    image(kiwiVerdeGrande, booble.x, booble.y, 140, 130);
+    image(kiwiVerdeGrande, booble.x, booble.y, 150, 140);
     pop();
   }else if (cambiar == 5000) {
     push();
     imageMode(CENTER);
-    image(kiwiNaranjaGrande, booble.x, booble.y, 140, 130);
+    image(kiwiNaranjaGrande, booble.x, booble.y, 150, 140);
     pop();
   }else if (cambiar == 6000) {
     if(parpadeo == true){
@@ -138,14 +138,14 @@ function pajaro() {
         push();
         tint(255,100);
         imageMode(CENTER);
-        image(kiwiGrisGrande, booble.x, booble.y, 140, 130); 
+        image(kiwiGrisGrande, booble.x, booble.y, 150, 140); 
         pop();
       }
     }
     if(parpadeo == false){
       push();
       imageMode(CENTER);
-      image(kiwiGrisGrande, booble.x, booble.y, 140, 130);
+      image(kiwiGrisGrande, booble.x, booble.y, 150, 140);
       pop();
     }
     }
@@ -195,23 +195,29 @@ function keyPressed() {
 }
 
 function barraMotivacion() {
+  push();
+  imageMode(CENTER);
   this.x = 100;
   this.y = height - 200;
+  
+
 
   if (motivacion == 3) {
-    image(alta,50,300,120,400);
+    image(alta,50,height/2,120,600);
     booble.mov = 7;
   }
   if (motivacion == 2) {
-    image(media,50,300,120,400);
+    image(media,50,height/2,120,600);
     booble.mov = 5;
   }
   if (motivacion == 1) {
-    image(baja,50,300,120,400);
+    image(baja,50,height/2,120,600);
     booble.mov = 3;
   }
   if (motivacion == 0) {
-    image(vacia,50,300,120,400);
+    image(vacia,50,height/2,120,600);
     booble.mov = 1;
   }
+
+    pop();
 }

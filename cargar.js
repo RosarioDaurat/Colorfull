@@ -14,6 +14,8 @@ var fade = 255;
 var fadeAmount = 5;
 var posY = -800;
 let final = "ninguno";
+var tipografia;
+var reiniciar = false;
 
 //--------------------NUBES--------------------------------------------
 var nubes = [];
@@ -27,6 +29,8 @@ let pausaGrises = 0;
 var contNubes = 0;
 let boss = false;
 var Cboss = 0;
+var countRayo = 100;
+let nubeListo = false;
 
 var cd = 160;
 var count = 200;
@@ -34,7 +38,7 @@ let fondo;
 var bossy = -800;
 //--------------------KIWI---------------------------------------------
 var booble = {
-  x: 700,
+  x: 750,
   y: 600,
   mov: 7,
   movy: 5,
@@ -48,20 +52,18 @@ var motivacion = 3;
 
 function preload() {
   yspeed = random(2.5, 5.5);
+   tipografia = loadFont("PatrickHand-Regular.ttf");
   //------------------------MUSICA----------------------------------------
-  efecto = loadSound("efecto.mp3");
-    aturdido = loadSound("aturdido.mp3");
-  canto = loadSound("Canto1parte.mp3");
-  musica = loadSound("musicaparte1.mp3");
-  musica2 = loadSound("musicaparte2.mp3");
-  lluvia1 = loadSound("Lluvia1.mp3");
-  Boss = loadSound("boss.mp3");
-  Trueno = loadSound("Trueno.mp3");
+  efecto = loadSound("sonidos/efecto.mp3");
+  aturdido = loadSound("sonidos/aturdido.mp3");
+  canto = loadSound("sonidos/Canto1parte.mp3");
+  musica = loadSound("sonidos/musicaparte1.mp3");
+  lluvia1 = loadSound("sonidos/Lluvia1.mp3");
+  Trueno = loadSound("sonidos/Trueno.mp3");
   efecto.setVolume(0.1);
   Trueno.setVolume(0.2);
   lluvia1.setVolume(0.4);
   musica.setVolume(0.3);
-  Boss.setVolume(0.3);
   aturdido.setVolume(0.2);
   //----------------------KIWIBEBE----------------------------------------
    gif = loadImage("Kiwis/Kiwi bebe/kiwi bebe blanco.gif");
@@ -99,15 +101,15 @@ function preload() {
   nubeVerde = loadImage("nubes/nubes verdes.png");
   nubeNaranja = loadImage("nubes/nubes naranja.png");
   nubeCeleste = loadImage("nubes/nubes celestes.png");
-  nubeArcoiris = loadImage("nubes/nubesArcoiris.png");
+  nubeArcoiris = loadImage("nubes/nubeArcoiris.gif");
   nubeJefe = loadImage("otros/nubejefe.png")
   
   //------------------------OTROS-----------------------------------------
-  fondo1 = loadImage("otros/fondo.png");
-  alta = loadImage("otros/alta.png");
-  media = loadImage("otros/medio.png");
-  baja = loadImage("otros/baja.png");
+   fondo1 = loadImage("otros/fondo.png");
+  alta = loadImage("otros/alta (1).png");
+  media = loadImage("otros/media.png");
+  baja = loadImage("otros/3baja.png");
   vacia = loadImage("otros/baja0.png");
   
-  fondo = fondo1;
+    fondo = fondo1;
 }  
